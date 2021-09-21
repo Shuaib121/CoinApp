@@ -22,6 +22,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#download">Download</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -51,6 +52,8 @@ A simple app where you can add coins into a coin jar. The coin jar has a volume 
    ```sh
    git clone https://github.com/Shuaib121/CoinApp.git
    ```
+## Download
+[CoinApp](https://drive.google.com/file/d/19VFlIgfdudX9B92Z71qGcNSS67-NQ4I7/view?usp=sharing)
 
 ## Contact
 
