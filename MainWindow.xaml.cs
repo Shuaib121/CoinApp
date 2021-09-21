@@ -53,7 +53,11 @@
 
         private void TryAddCoin(Coin coin)
         {
-            if (coinJar.GetTotalVolume() + coin.Volume > 42) return;
+            if (coinJar.GetTotalVolume() + coin.Volume > 42)
+            {
+                MessageBox.Show("The Coin Jar is Too Full!", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             coinJar.AddCoin(coin);
             currentAmount.Content = $"${coinJar.GetTotalAmount()}";
