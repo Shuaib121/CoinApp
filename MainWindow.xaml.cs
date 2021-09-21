@@ -1,8 +1,8 @@
 ﻿namespace CoinApp
 {
-    using System.Windows;
+    using MahApps.Metro.Controls;
 
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
