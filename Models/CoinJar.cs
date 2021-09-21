@@ -1,6 +1,6 @@
-﻿namespace CoinJarApp.Models
+﻿namespace CoinApp.Models
 {
-    using CoinJarApp.Interfaces;
+    using CoinApp.Interfaces;
 
     class CoinJar : ICoinJar
     {

@@ -1,4 +1,4 @@
-﻿namespace CoinJarApp.Interfaces
+﻿namespace CoinApp.Interfaces
 {
     public interface ICoin
     {
