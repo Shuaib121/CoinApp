@@ -38,6 +38,4 @@
         <Label x:Name="currentVolume" Content="0/42" HorizontalContentAlignment="Center" Margin="446,166,442,0" FontSize="20" FontWeight="Normal" FontStyle="Normal" Height="37" VerticalAlignment="Top"/>
         <Label x:Name="currentAmount" HorizontalContentAlignment="Center" Margin="431,223,436,0" FontSize="36" FontWeight="Normal" FontStyle="Normal" Height="61" VerticalAlignment="Top" Content="$0"/>
     </Grid>
-
-
 </mah:MetroWindow>

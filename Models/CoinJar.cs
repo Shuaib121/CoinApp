@@ -16,6 +16,7 @@
         public decimal GetTotalAmount()
             => totalAmount;
 
+        //Extra method I added to get the volume of the jar in order to prevent the user from adding in more coins if the jar is full.
         public decimal GetTotalVolume()
             => totalVolume;
 
