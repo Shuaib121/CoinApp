@@ -2,7 +2,7 @@
 {
     using CoinApp.Interfaces;
 
-    class Coin : ICoin
+    public class Coin : ICoin
     {
         private decimal _amount;
         private decimal _volume;

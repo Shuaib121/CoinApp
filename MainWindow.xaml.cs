@@ -4,12 +4,14 @@
     using System.Windows;
 
     using CoinApp.Models;
+    using CoinApp.Services;
 
     using MahApps.Metro.Controls;
 
     public partial class MainWindow : MetroWindow
     {
-        private CoinJar coinJar = new CoinJar();
+        private readonly CoinJar coinJar = new CoinJar();
+        private readonly CoinJarService coinJarService = new CoinJarService();
 
         Dictionary<string, Coin> coins = new Dictionary<string, Coin>(){
             {"Penny", new Coin(new decimal(0.01), new decimal(0.0118349))},
@@ -19,52 +21,21 @@
         };
 
         public MainWindow()
-        {
-            InitializeComponent();
-        }
+            => InitializeComponent();
 
         private void AddPenny(object sender, RoutedEventArgs e)
-        {
-            TryAddCoin(coins["Penny"]);
-        }
+            => coinJarService.TryAddCoin(coins["Penny"], coinJar, currentAmount, volumeBar, currentVolume);
 
         private void AddNickel(object sender, RoutedEventArgs e)
-        {
-            TryAddCoin(coins["Nickel"]);
-        }
+            => coinJarService.TryAddCoin(coins["Nickel"], coinJar, currentAmount, volumeBar, currentVolume);
 
         private void AddDime(object sender, RoutedEventArgs e)
-        {
-            TryAddCoin(coins["Dime"]);
-        }
+            => coinJarService.TryAddCoin(coins["Dime"], coinJar, currentAmount, volumeBar, currentVolume);
 
         private void AddQuarter(object sender, RoutedEventArgs e)
-        {
-            TryAddCoin(coins["Quarter"]);
-        }
+           => coinJarService.TryAddCoin(coins["Quarter"], coinJar, currentAmount, volumeBar, currentVolume);
 
-        private void Resetbtn(object sender, RoutedEventArgs e)
-        {
-            coinJar.Reset();
-            currentAmount.Content = "$0";
-            volumeBar.Value = 0;
-            currentVolume.Content = $"0/42";
-        }
-
-        private void TryAddCoin(Coin coin)
-        {
-            if (coinJar.GetTotalVolume() + coin.Volume > 42)
-            {
-                MessageBox.Show("The Coin Jar is Too Full!", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            coinJar.AddCoin(coin);
-            currentAmount.Content = $"${coinJar.GetTotalAmount()}";
-
-            var jarVolume = (double)coinJar.GetTotalVolume();
-            volumeBar.Value = jarVolume;
-            currentVolume.Content = $"{jarVolume:0.0}/42";
-        }
+        private void Reset(object sender, RoutedEventArgs e)
+            => coinJarService.Reset(coinJar, currentAmount, volumeBar, currentVolume);
     }
 }

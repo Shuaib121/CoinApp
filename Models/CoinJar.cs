@@ -2,7 +2,7 @@
 {
     using CoinApp.Interfaces;
 
-    class CoinJar : ICoinJar
+    public class CoinJar : ICoinJar
     {
         private decimal totalAmount = 0;
         private decimal totalVolume = 0;
@@ -14,14 +14,10 @@
         }
 
         public decimal GetTotalAmount()
-        {
-            return totalAmount;
-        }
+            => totalAmount;
 
         public decimal GetTotalVolume()
-        {
-            return totalVolume;
-        }
+            => totalVolume;
 
         public void Reset()
         {

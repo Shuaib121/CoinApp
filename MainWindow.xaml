@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="CoinApp.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="630" Width="1021" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="COINS" Height="630" Width="1021" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,6,2">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -21,7 +21,7 @@
             <Button Content="Dime&#xD;&#xA;(10c)" RenderTransformOrigin="-0.67,0.507" Height="120" Width="126" Click="AddDime" FontSize="22"/>
             <Button Content="Quarter&#xD;&#xA;    (25c)" RenderTransformOrigin="-0.67,0.507" Height="120" Width="126" Click="AddQuarter" FontSize="22"/>
         </StackPanel>
-        <Button Content="Reset" Margin="420,535,418,0" VerticalAlignment="Top" RenderTransformOrigin="-0.67,0.507" Height="43" Click="Resetbtn" FontSize="20"/>
+        <Button Content="Reset" Margin="420,535,418,0" VerticalAlignment="Top" RenderTransformOrigin="-0.67,0.507" Height="43" Click="Reset" FontSize="20"/>
         <Label Content="Add Coin" HorizontalContentAlignment="Center" Margin="390,319,392,0" VerticalAlignment="Top" Height="41" Width="233" FontSize="24"/>
         <mah:MetroProgressBar x:Name="volumeBar" Minimum="0" Maximum="42" RenderTransformOrigin="0.5,0.5" Foreground="ForestGreen" Margin="382,-122,382,122">
             <mah:MetroProgressBar.RenderTransform>
